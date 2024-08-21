@@ -9,7 +9,7 @@ Find out more in the article in the [MongoDB Dev Center](https://mdb.link/rails)
 Create a new Rails application using this template.
 
 ```
-rails new templatetest -m ./movies/template.rb --skip-active-record
+rails new templatetest -m https://raw.githubusercontent.com/joellord/rails-mongodb/main/template.rb --skip-active-record
 ```
 
 You will also need a MongoDB cluster ready to go with some sample data. The easiest way to get started is with an Atlas free cluster.

@@ -1,6 +1,6 @@
 development:
   clients:
     default:
-      uri: mongodb+srv://joellord:joellord@cluster0.ig5aqky.mongodb.net/sample_mflix
+      uri: <% CONNECTION_STRING %>
       options:
         server_selection_timeout: 5

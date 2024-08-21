@@ -45,6 +45,12 @@
   directory "lib", force: true
   directory "test", force: true
 
+  connection_string = ask("What is your connection string for MongoDB?")
+  gsub_file "config/mongoid.yml", /<% CONNECTION_STRING %>/, connection_string
+# end
+
+# def add_templates_with_project_name
+
   # These templates incorporate the name of the project
   # template "app/helpers/shared_helper.rb.tt"
   # template "app/views/layouts/_header.html.erb.tt"
