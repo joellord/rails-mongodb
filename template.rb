@@ -37,10 +37,10 @@ route "get 'about' => 'about#index'"
 route "root 'welcome#index'"
 route "resources :movies"
 
-rails_command "tailwindcss:build"
-
 connection_string = ask("What is your connection string for MongoDB?")
 gsub_file "config/mongoid.yml", /<% CONNECTION_STRING %>/, connection_string
+
+rails_command "tailwindcss:build"
 
 after_bundle do
   git :init
