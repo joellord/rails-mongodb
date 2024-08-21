@@ -15,4 +15,8 @@
       Search
     </button>
   </Form>
+
+  <% @searched_movies&.each do |movie| %>
+    <%= render movie %>
+  <% end %>
 </div>

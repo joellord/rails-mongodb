@@ -4,6 +4,11 @@ class MoviesController < ApplicationController
   # GET /movies or /movies.json
   def index
     @movies = Movie.limit(10)
+
+    # Return movies if a form was posted with a search term
+    if params[:search]
+      @searched_movies = Movie.where(title: /#{params[:search]}/i)
+    end
   end
 
   # GET /movies/1 or /movies/1.json
