@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="flex flex-col h-screen mx-2">
+      <nav class="flex h-16 items-center width-full">
+        <a href="/">
+          <%= image_tag("logo.png", width: '200') %>
+        </a>
+      </nav>
+      <div class="flex h-8 items-center bg-gray-100">
+        A Rails Template for MongoDB
+      </div>
+      <div class="flex flex-1 overflow-hidden">
+        <aside class="hidden sm:block my-1 w-64 overflow-y-auto">
+          <ul class="list-none">
+            <li><%= link_to "Movies", "/movies" %></li>
+            <li><%= link_to "* Add", "/movies/new" %></li>
+            <li><%= link_to "About", "/about" %></li>
+            <li><%= link_to "MongoDB Driver Docs", "https://www.mongodb.com/docs/mongoid/current/" %></li>
+          </ul>
+        </aside>
+        <main class="flex flex-1 my-1 overflow-y-auto paragraph px-4">
+          <%= yield %>
+        </main>
+      </div>
+      <div class="flex bg-gray-100">Fork this on &nbsp;<Link to="https://github.com/mongodb-developer/remix">Github</Link></div>
+    </div>
+  </body>
+</html>

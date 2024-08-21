@@ -1,0 +1,4 @@
+<div id="<%= dom_id movie %>">
+  <%= link_to "🗑️", movie_path(movie), data: { turbo_method: :delete } %>
+  <%= link_to "#{movie.title} (#{movie.year})", movie_path(movie) %>
+</div>

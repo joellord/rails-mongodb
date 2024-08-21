@@ -1,0 +1,18 @@
+<div>
+  <h1>Movies</h1>
+  <h2>Fetch ten movies</h2>
+  <p className="mb-2">Here are some movies from `sample_mflix.movies`</p>
+  <% @movies.each do |movie| %>
+    <%= render movie %>
+  <% end %>
+
+  <hr />
+
+  <h2>Search for a movie</h2>
+  <Form>
+    <input type="text" name="search" placeholder="Partial title" />
+    <button type="submit">
+      Search
+    </button>
+  </Form>
+</div>
